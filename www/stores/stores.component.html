@@ -1,0 +1,46 @@
+<!-- For Search bar -->
+<div class="row" style="margin: 0 0 10px 0">
+    <div class="col-md-8">
+        <input type="text" id="search" class="form-control" placeholder="Search">
+    </div>
+</div>
+
+<!-- For Displaying the Stores -->
+<div >
+    <table class="table .table-responsive">
+        <thead>
+        <tr>
+            <th></th>
+            <th>Store #</th>
+            <th>Store Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>ROE Auth</th>
+            <th>Payer</th>
+            <th>PayerSetup</th>
+            <th>AccType</th>
+        </tr>
+        </thead>
+        <tbody *ngFor = 'let store of stores'>
+        <tr>
+            <div class="form-check" style="margin: 8px 0 0 8px;">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                </label>
+            </div>
+            <td>{{ store.doc.store_number }}</td>
+            <td>{{ store.doc.store_name}}</td>
+            <td>{{ store.doc.address }}</td>
+            <td>{{ store.doc.city }}</td>
+            <td>{{ store.doc.state }}</td>
+            <td>{{ store.doc.zip }}</td>
+            <td>{{ store.doc.roe_authorization }}</td>
+            <td>{{ store.doc.payer }}</td>
+            <td>{{ store.doc.payersetup }}</td>
+            <td>{{ store.doc.acctype }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
